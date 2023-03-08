@@ -170,11 +170,42 @@ $ rospack profile
 ```
 ex) -gencode arch=compute_62,code=sm_62
 ```
----
 
 <br>
 
 ### 7️⃣ File Customizing
+- 앞서 카메라 노드를 확인한 것을 가져와 알맞게 변경한다. 
+
+#### 📖 ros.yaml
+```
+# 경로 이동
+$ cd (worksapce)/src/darknet_ros/darknet_ros/config
+$ sudo vi ros.yaml
+
+# 아래와 같은 부분을 자신의 노드와 맞게 변경해준다.
+subscribers:
+
+  camera_reading:
+    topic: /{my_camera_node}
+    queue_size: 1
+
+```
+
+<br>
+
+#### 📖 darknet_ros.launch
+```
+# 경로 이동
+$ cd (worksapce)/src/darknet_ros/darknet_ros/launch
+$ sudo vi darknet_ros.launch
+
+# 아래와 같은 부분을 자신의 노드와 맞게 변경해준다.
+<arg name="launch_prefix" default=""/>
+<arg name="image" default="{my_camera_node}"/>
+```
+
+
+<br><br>
 
 ---
 

@@ -59,6 +59,59 @@ $ sudo apt-get purge gdm3
 <br>
 
 
+### 3. Swqp 공간 설정
+- Jetson Nano의 RAM만으로는 충당이 되지 않습니다. OpenCV 전체 빌드에는 약 8G이상의 RAM이 필요 합니다.
+- 하드웨어 적으로 RAM 업그레이드가 불가능하니 여기에서는 microSD에 Swap 공간을 할당하여 사용한다.
+```
+# 업데이트 확인
+$ sudo apt-get update
+
+# dphys-swapfile 설치
+$ sudo apt-get install dphys-swapfile
+
+# /sbin/dphys-swapfile 열기
+$ sudo vi /sbin/dphys-swapfile
+
+# /etc/dphys-swapfile 열기
+$ sudo vi /etc/dphys-swapfile
+
+
+## 두 Swap파일의 값이 다음과 같도록 값을 추가하거나, 파일 내 주석을 해제합니다.
+# CONF_SWAPSIZE=4096
+# CONF_SWAPFACTOR=2
+# CONF_MAXSWAP=4096
+
+# Jetson Nano 재부팅
+$ sudo reboot
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

@@ -233,7 +233,8 @@ $ roslaunch darknet_ros darknet_ros.launch
 
 ### ✒️ 실행 결과 
 
-
+#### **Youtube**
+https://youtu.be/PTWyrLjbGLE
 
 
 

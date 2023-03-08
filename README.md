@@ -45,10 +45,16 @@ $ sudo reboot
 $ jtop
 ```
 
+<br>
 
-
-
-
+### 2. gdm3 Purge & lightdm Install
+- Jetson Nano는 lightdm 환경에서 YOLO를 실행 시 램 사용량이 2GB이상 치솟습니다. Swap도 200MB정도 차지합니다. 
+- 또한, 이후 OpenCV 빌드를 위해 Swap 공간까지 총 8.5GB+의 공간이 필요합니다. 
+- 따라서 기존의 gdm3를 제거하고 lightdm을 설치하여 idle 상태에서의 램 사용량을 낮출 수 있다. 
+```
+$ sudo apt-get install lightdm
+$ sudo apt-get purge gdm3
+```
 
 
 

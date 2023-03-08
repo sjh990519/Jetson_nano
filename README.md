@@ -47,7 +47,7 @@ $ jtop
 
 <br>
 
-### 2. gdm3 Purge & lightdm Install
+### :two: gdm3 Purge & lightdm Install
 - Jetson Nano는 lightdm 환경에서 YOLO를 실행 시 램 사용량이 2GB이상 사용된다. Swap도 200MB정도 차지한다. 
 - 또한, 이후 OpenCV 빌드를 위해 Swap 공간까지 총 8.5GB+의 공간이 필요합니다. 
 - 따라서 기존의 gdm3를 제거하고 lightdm을 설치하여 idle 상태에서의 램 사용량을 낮출 수 있다. 
@@ -59,7 +59,7 @@ $ sudo apt-get purge gdm3
 <br>
 
 
-### 3. Swqp 공간 설정
+### 3️⃣ Swqp 공간 설정
 - Jetson Nano의 RAM만으로는 충당이 되지 않습니다. OpenCV 전체 빌드에는 약 8G이상의 RAM이 필요 합니다.
 - 하드웨어 적으로 RAM 업그레이드가 불가능하니 여기에서는 microSD에 Swap 공간을 할당하여 사용한다.
 ```
@@ -87,7 +87,7 @@ $ sudo reboot
 
 <br><br>
 
-### 4. OpenCV with CUDA Install
+### 4️⃣ OpenCV with CUDA Install
 - 원문에서 Jetson Nano에 OpenCV설치할 때 wget을 사용하여 스크립트 파일을 받은 후 스크립트 파일을 사용하여 한번에 설치한다.
 - 다른 방법으로는 스크립트 파일을 연 후 명령어줄을 하나씩 실행하는 방법을 사용하면 된다.
 - URL : https://qengineering.eu/install-opencv-4.5-on-jetson-nano.html
@@ -125,7 +125,7 @@ $ sudo rm -rf ~/opencv_contrib
 <br>
 
 
-### 5. usb_camera launchfile Instsall
+### 5️⃣ usb_camera launchfile Instsall
 - usb 카메라를 사용하기 위한 launch파일 다운로드
 
 ```
@@ -148,7 +148,7 @@ $  rostopic list
 
 <br>
 
-### 6. darknet_ros Install
+### 6️⃣ darknet_ros Install
 - 사전에 CUDA 미설치 시 패키지를 build 할 경우, CMakeLists.txt 파일에 의해 CPU를 사용하여 연산하는 빙식으로 빌드된다.
 - 따라서 위의 설명을 통해 반드시 CUDA, cuDNN 설치 후 빌드 한다.
 ```
@@ -174,14 +174,29 @@ ex) -gencode arch=compute_62,code=sm_62
 
 <br>
 
-## :pushpin: Install
+### 7️⃣ File Customizing
+
+---
+
+## 💻: Run project
 
 <br>
 
+```
+$ roscore
+$ sudo chmod +x /dev/video*
 
+# 카메라 실행
+$ rosrun usb_cam usb_cam_node
 
+# darknet_ros 실행
+$ cd catkin_ws
+$ source devel/setup.bash
+$ roslaunch darknet_ros darknet_ros.launch
+```
+---
 
-
+### ✒️ 실행 결과 
 
 
 

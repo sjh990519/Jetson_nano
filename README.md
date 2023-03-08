@@ -1,2 +1,11 @@
 # Jetson_nano
-Jetson_nano &amp; darknet_ros
+### Jetson Nano Developer Kit 2G + YOLOv3
+
+<br><br><br>
+
+## :hammer: 프로젝트 소개
+Jetson nano 보드에서 darknet ros 를 활용한 Object Detection 
+
+<br>
+
+

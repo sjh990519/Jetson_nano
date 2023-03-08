@@ -14,13 +14,13 @@ Jetson nano 보드에서 GPU를 사용하여 darknet ros 를 활용한 Object De
 ### Jetson Nano 
 |   **Title** |   **Description**   |
 |:--------    |       :-------------|
-|OS           |      |
-|Jetpack      |0.0.0 version      |
+|OS           |Ubuntu 20.04       |
+|Jetpack      |4.0.0 version      |
 |ROS          |Noetic Ninjemys    |
-|OpenCV       |0.0.0 version      |
-|Python       |0.0.0 version      |
-|CUDA         |0.0.0 version      |
-|cuDNN        |0.0.0 version      |
+|OpenCV       |4.5.2 version      |
+|Python       |3.8.10 version     |
+|CUDA         |10.2.300 version   |
+|cuDNN        |8.2.1.32 version   |
 
 ---
 

@@ -125,7 +125,58 @@ $ sudo rm -rf ~/opencv_contrib
 <br>
 
 
+### 5. usb_camera launchfile Instsall
+- usb 카메라를 사용하기 위한 launch파일 다운로드
 
+```
+# "Install
+$ sudo apt-get install ros-noetic-usb-cam
+
+# 카메라 인식 확인
+$ lsusb
+$ ls -al /dev/video*
+
+# 실행
+$ rosrun usb_cam usb_cam_node
+
+# Topic 확인
+$  rostopic list
+
+# Camera node 토픽을 확인한다. 추후 사용할 예정
+/camera/image_raw
+```
+
+<br>
+
+### 6. darknet_ros Install
+- 사전에 CUDA 미설치 시 패키지를 build 할 경우, CMakeLists.txt 파일에 의해 CPU를 사용하여 연산하는 빙식으로 빌드된다.
+- 따라서 위의 설명을 통해 반드시 CUDA, cuDNN 설치 후 빌드 한다.
+```
+# git clone
+$ cd catkin_ws/src
+$ git clone --recursive https://github.com/leggedrobotics/darknet_ros.git
+$ cd ..
+
+# 빌드 완료 시
+$ rospack profile
+```
+
+<br>
+
+
+- GPU를 사용하여 Darknet을 구동을 원할 시 CUDA Wiki내의 표를 확인하여 자신의 Compute capability에 맞게 라인을 기입해야 한다.
+- CMakeLists.txt에서는 위 라인으로 빌드시  Compute capability를 확인합니다.
+- URL : https://en.wikipedia.org/wiki/CUDA#Supported_GPUs
+```
+ex) -gencode arch=compute_62,code=sm_62
+```
+---
+
+<br>
+
+## :pushpin: Install
+
+<br>
 
 
 

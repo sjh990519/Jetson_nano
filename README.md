@@ -22,3 +22,12 @@ Jetson nano 보드에서 darknet ros 를 활용한 Object Detection(yolo)를 실
 |CUDA         |0.0.0 version      |
 |cuDNN        |0.0.0 version      |
 
+---
+
+<br><br><br>
+
+
+## :pushpin: Install
+
+
+

@@ -11,7 +11,7 @@ Jetson nano 보드에서 darknet ros 를 활용한 Object Detection(yolo)를 실
 
 ## ⚙️ 개발환경
 
-### :Jetson: Common 
+### Jetson Common 
 |   **Title** |   **Description**   |
 |:--------    |       :-------------|
 |OS           |      |

@@ -90,6 +90,7 @@ $ sudo reboot
 ### 4. OpenCV with CUDA Install
 - 원문에서 Jetson Nano에 OpenCV설치할 때 wget을 사용하여 스크립트 파일을 받은 후 스크립트 파일을 사용하여 한번에 설치한다.
 - 다른 방법으로는 스크립트 파일을 연 후 명령어줄을 하나씩 실행하는 방법을 사용하면 된다.
+- URL : https://qengineering.eu/install-opencv-4.5-on-jetson-nano.html
 - 약 2시간 이상 소요된다.
 ```
 $ wget https://github.com/Qnegineering/Install-OpenCV-Jetson-Nano/raw/main/OpenCV-4-5-2.sh

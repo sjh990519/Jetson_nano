@@ -4,7 +4,7 @@
 <br><br><br>
 
 ## :hammer: 프로젝트 소개
-Jetson nano 보드에서 darknet ros 를 활용한 Object Detection(yolo)를 실행하는 프로젝트
+Jetson nano 보드에서 GPU를 사용하여 darknet ros 를 활용한 Object Detection(yolo)를 실행하는 프로젝트
 
 <br>
 

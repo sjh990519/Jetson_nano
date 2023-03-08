@@ -85,22 +85,42 @@ $ sudo vi /etc/dphys-swapfile
 $ sudo reboot
 ```
 
+<br><br>
+
+### 4. OpenCV with CUDA Install
+- 원문에서 Jetson Nano에 OpenCV설치할 때 wget을 사용하여 스크립트 파일을 받은 후 스크립트 파일을 사용하여 한번에 설치한다.
+- 다른 방법으로는 스크립트 파일을 연 후 명령어줄을 하나씩 실행하는 방법을 사용하면 된다.
+- 약 2시간 이상 소요된다.
+```
+$ wget https://github.com/Qnegineering/Install-OpenCV-Jetson-Nano/raw/main/OpenCV-4-5-2.sh
+$ sudo chmod 755 ./OpenCV-4-5-2.sh
+$ ./OpenCV-4-5-2.sh
+```
+
+<br>
+- 추가로 설치 후 SD카드 공간 확보를 하고싶은 경우 아래와 같이 실행하면 된다.
+- 이전에 설치한 Swap 제거 과정이다.
+```
+$ rm OpenCV-4-5-2.sh
+
+# Swap 제거
+$ sudo /etc/init.d/dphys-swapfile stop
+$ sudo apt-get remove --purge dphys-swapfile
+
+# 약 300MB 추가 SD공간 확보가 필요할 시
+$ sudo rm -rf ~/opencv
+$ sudo rm -rf ~/opencv_contrib
+```
+
+<br>
+
+#### **jtop 명령어 실행**
+- 기존의 OpenCV 버전에서 변경된 OpenCV버전을 확인할 수 있다.
+- CUDA가 No 에서 Yes로 변경된 것을 확인할 수 있다.
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
+<br>
 
 
 

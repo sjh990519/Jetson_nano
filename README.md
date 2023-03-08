@@ -119,7 +119,7 @@ $ sudo rm -rf ~/opencv_contrib
 #### ✔️ **jtop 명령어 실행**
 - 기존의 OpenCV 버전에서 변경된 OpenCV버전을 확인할 수 있다.
 - CUDA가 No 에서 Yes로 변경된 것을 확인할 수 있다.
-
+![jtop](https://user-images.githubusercontent.com/94280596/223626964-6aa5d15b-114c-4a5a-a18d-de5421fe83f5.png)
 
 
 <br>
